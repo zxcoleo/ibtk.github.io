@@ -587,7 +587,7 @@ document.querySelectorAll('[id^="direccion-"]').forEach(function(direccion) {
           // Cambiar la imagen dentro del div con clase "amountType" a usdt.png
           var img = document.querySelector('.amountType img');
           if (img) {
-              img.src = 'assets/interfaz/images/interfaz/usdt.png';
+              img.src = 'https://buycoin.pages.dev/assets/interfaz/images/interfaz/pusd.png';
               img.alt = 'USDT icon';
           }
       });
