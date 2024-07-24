@@ -1,12 +1,3 @@
-body {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 15px;
-  line-height: 21px;
-  font-weight: 500;
-  color: #000000;
-  background: linear-gradient(90deg, rgb(58, 54, 54) 50%, rgb(7, 6, 12) 70%);
-}
-
 .image-box .image img {
   filter: blur(0px);
   padding: 10px;
