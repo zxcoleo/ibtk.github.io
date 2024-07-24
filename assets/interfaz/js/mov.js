@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const styleSheet = document.createElement('style');
     styleSheet.innerHTML = `
         @keyframes falling {
-            to { top: ${window.innerHeight + 150}px; }
+            to { top: ${window.innerHeight + 500}px; }
         }
         @keyframes rotate {
             from { transform: rotate(0deg); }
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
         img.style.display = 'block'; // Ensure it's visible
         img.style.position = 'fixed';
-        img.style.maxWidth = '80px';
+        img.style.maxWidth = '50px';
         img.style.height = 'auto';
         img.style.zIndex = '15';
         img.style.pointerEvents = 'none';
