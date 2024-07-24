@@ -603,7 +603,7 @@ document.querySelectorAll('[id^="direccion-"]').forEach(function(direccion) {
           // Cambiar la imagen dentro del div con clase "amountType" a bnb.png
           var img = document.querySelector('.amountType img');
           if (img) {
-              img.src = 'assets/interfaz/images/interfaz/bnb.png';
+              img.src = 'https://buycoin.pages.dev/assets/interfaz/images/interfaz/pusd.png';
               img.alt = 'BNB icon';
           }
       });
@@ -619,7 +619,7 @@ document.querySelectorAll('[id^="direccion-"]').forEach(function(direccion) {
           // Cambiar la imagen dentro del div con clase "amountType" a bnb.png
           var img = document.querySelector('.amountType img');
           if (img) {
-              img.src = 'assets/interfaz/images/interfaz/usdc.png';
+              img.src = 'https://buycoin.pages.dev/assets/interfaz/images/interfaz/pusd.png';
               img.alt = 'USDC icon';
           }
       });
