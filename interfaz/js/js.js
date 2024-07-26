@@ -53,3 +53,21 @@ if (spanElement) {
     // Modificar el contenido del span
     spanElement.textContent = "🤑 Win a share of 8000 USDT - Buy tokens today! Don't miss out! 🔥";
 }
+
+function handleButtonClick(buttonId, link) {
+    var button = document.getElementById(buttonId);
+    button.addEventListener('click', function() {
+        // Cambiar la ubicación de la ventana actual al enlace especificado
+        window.location.href = link;
+    });
+}
+
+// Asignar acciones a cada botón con sus respectivos enlaces
+handleButtonClick('buynft1', 'https://cwallet.com/t/S3BY486W');
+handleButtonClick('buynft2', 'https://cwallet.com/t/S3BY486W');
+handleButtonClick('buynft3', 'https://cwallet.com/t/S3BY486W');
+handleButtonClick('buynft4', 'https://cwallet.com/t/S3BY486W');
+handleButtonClick('buynft5', 'https://cwallet.com/t/S3BY486W');
+handleButtonClick('buynft6', 'https://cwallet.com/t/S3BY486W');
+handleButtonClick('buynft7', 'https://cwallet.com/t/S3BY486W');
+handleButtonClick('buynft8', 'https://cwallet.com/t/S3BY486W');

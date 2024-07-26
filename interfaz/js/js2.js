@@ -243,7 +243,7 @@ function showQR(button, qrSrc) {
     var iconSrc = button.querySelector('img').src;
 
     // Mostrar la imagen y el icono centrado sobre la imagen QR
-    qrImage.src = qrSrc || 'assets/interfaz/images/qr/qr.png'; // Imagen QR base si qrSrc no está definido
+    qrImage.src = qrSrc || 'interfaz/images/qr/qr.png'; // Imagen QR base si qrSrc no está definido
     qrImage.style.display = 'block';
     
     iconImage.src = iconSrc; // Mostrar la imagen del icono seleccionado
