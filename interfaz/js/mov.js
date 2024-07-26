@@ -76,3 +76,12 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(changeImage, 2000); // Cambiar cada 3 segundos (3000 milisegundos)
   });
 
+
+
+
+
+
+
+
+
+  

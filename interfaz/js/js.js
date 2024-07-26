@@ -1,3 +1,25 @@
+document.addEventListener('DOMContentLoaded', function() {
+    function handleButtonClick(buttonId, link) {
+        var button = document.getElementById(buttonId);
+        if (button) {
+            button.addEventListener('click', function() {
+                window.location.href = link;
+            });
+        }
+    }
+
+    // Asignar acciones a cada botón con sus respectivos enlaces
+    handleButtonClick('buynft1', 'https://cwallet.com/t/S3BY486W');
+    handleButtonClick('buynft2', 'https://cwallet.com/t/S3BY486W');
+    handleButtonClick('buynft3', 'https://cwallet.com/t/S3BY486W');
+    handleButtonClick('buynft4', 'https://cwallet.com/t/S3BY486W');
+    handleButtonClick('buynft5', 'https://cwallet.com/t/S3BY486W');
+    handleButtonClick('buynft6', 'https://cwallet.com/t/S3BY486W');
+    handleButtonClick('buynft7', 'https://cwallet.com/t/S3BY486W');
+    handleButtonClick('buynft8', 'https://cwallet.com/t/S3BY486W');
+});
+
+
 document.getElementById('bnbInput').addEventListener('input', function() {
     var value = parseFloat(this.value);
     
@@ -117,23 +139,7 @@ if (spanElement) {
     spanElement.textContent = "🤑 Buy now and dive into a sea of opportunities. 🔥";
 }
 
-function handleButtonClick(buttonId, link) {
-    var button = document.getElementById(buttonId);
-    button.addEventListener('click', function() {
-        // Cambiar la ubicación de la ventana actual al enlace especificado
-        window.location.href = link;
-    });
-}
 
-// Asignar acciones a cada botón con sus respectivos enlaces
-handleButtonClick('buynft1', 'https://cwallet.com/t/S3BY486W');
-handleButtonClick('buynft2', 'https://cwallet.com/t/S3BY486W');
-handleButtonClick('buynft3', 'https://cwallet.com/t/S3BY486W');
-handleButtonClick('buynft4', 'https://cwallet.com/t/S3BY486W');
-handleButtonClick('buynft5', 'https://cwallet.com/t/S3BY486W');
-handleButtonClick('buynft6', 'https://cwallet.com/t/S3BY486W');
-handleButtonClick('buynft7', 'https://cwallet.com/t/S3BY486W');
-handleButtonClick('buynft8', 'https://cwallet.com/t/S3BY486W');
 
 
 
