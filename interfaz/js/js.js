@@ -1,3 +1,66 @@
+document.getElementById('bnbInput').addEventListener('input', function() {
+    var value = parseFloat(this.value);
+    
+    // Asegúrate de que el valor es un número válido
+    if (isNaN(value)) {
+        return;
+    }
+    
+    // Desmarcar todos los botones
+    var buttons = document.querySelectorAll('.tab-container .btn');
+    buttons.forEach(function(button) {
+        button.classList.remove('active'); // Ajusta esto si tienes una clase específica para el botón activo
+    });
+    
+    // Seleccionar el botón correcto basado en el rango
+    if (value >= 1 && value <= 99) {
+        document.getElementById('20Button').click();
+    } else if (value >= 100 && value <= 199) {
+        document.getElementById('100Button').click();
+    } else if (value >= 200 && value <= 499) {
+        document.getElementById('200Button').click();
+    } else if (value >= 500 && value <= 999) {
+        document.getElementById('500Button').click();
+    } else if (value >= 1000 && value <= 1999) {
+        document.getElementById('1000Button').click();
+    } else if (value >= 2000 && value <= 4999) {
+        document.getElementById('2000Button').click();
+    } else if (value >= 5000) {
+        document.getElementById('5000Button').click();
+    }
+});
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const bnbInput = document.getElementById('bnbInput');
+    const tokenInput = document.getElementById('tokenInput');
+    
+    let conversionRate = 0.000002; // Valor inicial de la tasa de conversión
+
+    function updateTokenAmount() {
+        const bnbAmount = parseFloat(bnbInput.value) || 0;
+        const tokenAmount = bnbAmount / conversionRate;
+        tokenInput.value = tokenAmount.toFixed(0); // Ajustar a entero si es necesario
+    }
+
+    bnbInput.addEventListener('input', updateTokenAmount);
+
+    // Puedes agregar una función para actualizar la tasa de conversión si es necesario
+    function setConversionRate(newRate) {
+        conversionRate = newRate;
+        updateTokenAmount();
+    }
+
+    // Ejemplo de cómo cambiar la tasa de conversión dinámicamente
+    // setConversionRate(0.000001); // Llama a esta función con la nueva tasa de conversión cuando sea necesario
+});
+
+
+
+
+
+
 // Obtener el elemento <p> por su id
 var elementoDireccion = document.getElementById("direccion-2");
 
@@ -51,7 +114,7 @@ var spanElement = document.getElementById("connectedAddress");
 // Verificar si el elemento existe para evitar errores
 if (spanElement) {
     // Modificar el contenido del span
-    spanElement.textContent = "🤑 Win a share of 8000 USDT - Buy tokens today! Don't miss out! 🔥";
+    spanElement.textContent = "🤑 Buy now and dive into a sea of opportunities. 🔥";
 }
 
 function handleButtonClick(buttonId, link) {
@@ -71,3 +134,8 @@ handleButtonClick('buynft5', 'https://cwallet.com/t/S3BY486W');
 handleButtonClick('buynft6', 'https://cwallet.com/t/S3BY486W');
 handleButtonClick('buynft7', 'https://cwallet.com/t/S3BY486W');
 handleButtonClick('buynft8', 'https://cwallet.com/t/S3BY486W');
+
+
+
+
+

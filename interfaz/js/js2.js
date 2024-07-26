@@ -1,3 +1,34 @@
+// Función para generar un número aleatorio en un rango
+function getRandomNumber(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
+// Función para actualizar el valor progresivo y el tiempo de espera
+function updateValue() {
+    let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 1179312.52; // Valor inicial
+    const targetValue = 600000000.00; // Valor objetivo
+    const increment = getRandomNumber(1.48, 30.13); // Incremento aleatorio
+
+    // Incrementar el valor actual
+    const newValue = Math.min(currentValue + increment, targetValue);
+
+    // Actualizar el texto con formato de moneda
+    document.getElementById('usdt-raised').innerText = '$' + newValue.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+
+    // Guardar el nuevo valor en el almacenamiento local
+    localStorage.setItem('usdt-raised', newValue);
+
+    // Si no hemos alcanzado el valor objetivo, programar la próxima actualización
+    if (newValue < targetValue) {
+        setTimeout(updateValue, getRandomNumber(1300, 5330));
+    }
+}
+
+// Llamar a la función inicialmente para comenzar la cuenta progresiva
+updateValue();
+
+
+
 function updateCountdown() {
     // Recuperar la fecha objetivo del almacenamiento local, si está disponible
     let targetDate = localStorage.getItem('targetDate');
@@ -630,92 +661,10 @@ document.querySelectorAll('[id^="direccion-"]').forEach(function(direccion) {
 
 
           // SUMA DE $
-
-// Función para generar un número aleatorio en un rango
-    function getRandomNumber(min, max) {
-        return Math.random() * (max - min) + min;
-      }
   
-      // Función para actualizar el valor progresivo y el tiempo de espera
-      function updateValue() {
-        let currentValue = parseFloat(localStorage.getItem('usdt-raised')) || 2479312.50; // Valor inicial
-        const targetValue = 600000000.00; // Valor objetivo
-        const increment = getRandomNumber(1.48, 15.13); // Incremento aleatorio
-  
-        // Incrementar el valor actual
-        const newValue = Math.min(currentValue + increment, targetValue);
-  
-        // Actualizar el texto con formato de moneda
-        document.getElementById('usdt-raised').innerText = '$' + newValue.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-        
-        // Guardar el nuevo valor en el almacenamiento local
-        localStorage.setItem('usdt-raised', newValue);
-        
-        // Si no hemos alcanzado el valor objetivo, programar la próxima actualización
-        if (newValue < targetValue) {
-          setTimeout(updateValue, getRandomNumber(1300, 5330));
-        }
-      }
-  
-      // Llamar a la función inicialmente para comenzar la cuenta progresiva
-      updateValue();
-
-          // FIN SUMA DE $
-
-          // SELECCION DE BOTONES
-
-          function selectTab(button) {
-            // Obtener todos los botones
-            var buttons = document.querySelectorAll('.tab-container .btn');
-    
-            // Remover la clase 'selected' de todos los botones
-            buttons.forEach(function(btn) {
-                btn.classList.remove('selected');
-            });
-    
-            // Agregar la clase 'selected' solo al botón clicado
-            button.classList.add('selected');
-        }
+      // FIN SUMA DE $
 
                   // FIN SELECCION DE BOTONES
-
-
-                  // RESETEAR CAMPOS X
-
-// Función para resetear los campos de entrada
-function resetInputs() {
-  document.getElementById('bnbInput').value = '';
-  document.getElementById('tokenInput').value = '';
-}
-
-// Función para manejar el cambio de red en MetaMask (simulado)
-function handleMetaMaskNetworkChange() {
-  resetInputs();  // Resetea los campos cuando cambia la red en MetaMask (simulación)
-}
-
-// Función para manejar el cambio de botón
-function handleButtonClick(button) {
-  resetInputs();  // Resetea los campos cuando se cambia de botón
-}
-
-// Simulación de evento para cambiar de red en MetaMask
-document.addEventListener('MetaMaskNetworkChanged', handleMetaMaskNetworkChange);
-
-// Asignar eventos a los botones
-document.getElementById('bnbButton').addEventListener('click', function() {
-  handleButtonClick(this);
-});
-document.getElementById('ethButton').addEventListener('click', function() {
-  handleButtonClick(this);
-});
-document.getElementById('usdtButton').addEventListener('click', function() {
-  handleButtonClick(this);
-});
-document.getElementById('usdcButton').addEventListener('click', function() {
-  handleButtonClick(this);
-});
-  
-                  // FIN RESETEAR CAMPOS X
 
                   // CODIGO ALEATORIO
 
