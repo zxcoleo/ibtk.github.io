@@ -77,6 +77,20 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 
+    document.addEventListener('DOMContentLoaded', () => {
+        // Seleccionar todos los botones con la clase btn
+        const buttons = document.querySelectorAll('.tab-container .btn');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Eliminar la clase 'selected' de todos los botones
+                buttons.forEach(btn => btn.classList.remove('selected'));
+                
+                // Agregar la clase 'selected' al botón clicado
+                button.classList.add('selected');
+            });
+        });
+    });
 
 
 
@@ -84,4 +98,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-  
+
+
+
+
+
+
+
+
+

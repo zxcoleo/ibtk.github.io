@@ -11,15 +11,15 @@ body, html {
   }
 
   .purchase-interface {
-    background: linear-gradient(90deg, rgb(172, 172, 172) 50%, rgba(160, 115, 160, 0.966) 80%);
+    background: linear-gradient(90deg, rgb(40, 50, 70) 30%, rgb(40, 50, 70) 80%);
     border-radius: 20px;
-    width: 550px;
+    width: 470px;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-
 }
+
 
 .value, .indicator {
     color: rgb(0, 0, 0); /* Texto negro */
@@ -28,11 +28,12 @@ body, html {
 
 /* Estilos de la tarjeta de tiempo */
 .time-card {
+    font-size: 11px;
     display: flex; /* Usar display flex */
     flex-direction: column; /* Apilar los elementos uno encima del otro */
     align-items: center; /* Centrar los elementos horizontalmente */
-    width: 90px;
-    height: 70px;
+    width: 100px;
+    height: 50px;
     background-color: #f0f0f0;
 }
 
@@ -56,7 +57,7 @@ body, html {
 
 .bar { 
     height: 100%; 
-    background: linear-gradient(90deg, rgb(255, 136, 0) 50%, rgb(255, 51, 0) 70%);
+    background: linear-gradient(90deg, rgb(230, 126, 7) 50%, rgb(231, 51, 6) 70%);
 }
 
 /* Estilos para los campos de cantidad */
@@ -276,13 +277,16 @@ body, html {
 
 
 .tradingtext {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
-    color: white;
     text-align: center; /* Para centrar el contenido horizontalmente */
 }
 
-
+.securetext {
+    display: block;
+    text-align: center; /* Para centrar el contenido horizontalmente */
+    font-size: 10px;
+}
 
 
 
